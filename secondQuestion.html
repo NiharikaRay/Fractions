@@ -1,0 +1,74 @@
+<html> 
+<link rel="stylesheet" type="text/css" href="index.css">
+
+<body background="FadedTreasureMap.jpg">
+
+
+<form id = "firstQustion" name = "firstQuestion" method="get" action="secondQuestion.html" >
+
+<div class="boxedNumeratorOne">
+  1
+</div>
+<hr class="barOne" noshade size=7 width=120px>
+
+<div class="boxedDenominatorOne">
+3
+</div>
+
+<img id="plus" src="plus.svg" height="40" width="40" style= "position:absolute; top:385px; left:600px">
+
+<div class="boxedNumeratorTwo">
+  1
+</div>
+<hr class="barTwo" noshade size=7 width=120px>
+
+<div class="boxedDenominatorTwo">
+  2
+</div>
+
+<img src="equalsign.svg" height="40" width="40" style="position:absolute; top:385px; left:850px"> 
+
+<input type="textarea" id="answerNumOne"></input> 
+<hr class="barThree" noshade size=7 width=120px>
+<input type="textarea" id="answerNumTwo"></input> 
+
+
+<script type="text/javascript">
+var answerNumOne = document.getElementById("answerNumOne")
+var answerNumTwo = document.getElementById("answerNumTwo")
+
+answerNumOne.addEventListener("input", function(e) {
+  var answer = answerNumOne.value;
+  if (answer != 5){
+    answerNumOne.setAttribute("style", "background-color:red");
+    console.log("you suck");
+  }
+  else{
+    answerNumOne.setAttribute("style", "background-color:green");
+    console.log("you rock!");
+  }
+
+}, false);
+
+answerNumTwo.addEventListener("input", function(e) {
+  var answer = answerNumTwo.value;
+  if (answer != 6){
+    answerNumTwo.setAttribute("style", "background-color:red");
+    if (answer == 5){
+      console.log("Did you remember to find a common denominator?")
+    }
+    console.log("you suck");
+  }
+  else{
+    answerNumTwo.setAttribute("style", "background-color:green");
+    console.log("you rock!");
+  }
+
+}, false);
+
+</script>
+
+<button id="submitQuestion" type="submit" value="submit">Go</button>
+
+</body>
+</html>
