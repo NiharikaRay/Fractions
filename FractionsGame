@@ -1,0 +1,10 @@
+<html>
+<link rel="stylesheet" type="text/css" href="index.css">
+
+<body background="OldTreasureMapEdit.jpg">
+<h1> Are you ready to find some treasure? </h1>
+<form action="playerscreen.html">
+<button id="submit" type="submit" value="submit">Yes</button>
+</form>
+</body>
+</html>
