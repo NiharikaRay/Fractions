@@ -118,6 +118,15 @@ h2
   font-size: 18;
 }
 
+#submitQuestion
+{
+  position: fixed;
+  top: 95%;
+  left: 59%;
+  margin-top: -100px;
+  margin-left: -200px;
+}
+
 
 .barOne {
   top: 400px;

@@ -34,6 +34,7 @@
 
 <script type="text/javascript">
 var answerNumOne = document.getElementById("answerNumOne")
+var answerNumTwo = document.getElementById("answerNumTwo")
 
 answerNumOne.addEventListener("input", function(e) {
   var answer = answerNumOne.value;
@@ -48,9 +49,22 @@ answerNumOne.addEventListener("input", function(e) {
 
 }, false);
 
+answerNumTwo.addEventListener("input", function(e) {
+  var answer = answerNumTwo.value;
+  if (answer != 4){
+    answerNumTwo.setAttribute("style", "background-color:red");
+    console.log("you suck");
+  }
+  else{
+    answerNumTwo.setAttribute("style", "background-color:green");
+    console.log("you rock!");
+  }
+
+}, false);
+
 </script>
 
-
+<button id="submitQuestion" type="submit" value="submit">Go</button>
 
 </body>
 </html>
