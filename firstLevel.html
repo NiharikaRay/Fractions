@@ -38,9 +38,11 @@ var answerNumOne = document.getElementById("answerNumOne")
 answerNumOne.addEventListener("input", function(e) {
   var answer = answerNumOne.value;
   if (answer != 3){
+    answerNumOne.setAttribute("style", "background-color:red");
     console.log("you suck");
   }
   else{
+    answerNumOne.setAttribute("style", "background-color:green");
     console.log("you rock!");
   }
 
