@@ -1,4 +1,4 @@
-
+/* Header styles */
 h1
 {
   font-family: "Comic Sans MS";
@@ -25,6 +25,8 @@ h2
   margin-top: -100px;
   margin-left:-200px;
 }
+
+/* Random other styles */
 
 #submit
 {
@@ -58,9 +60,8 @@ h2
   margin-left: -150px;
 }
 
-.motivation {
-  
-}
+
+/* Actually creating all the boxes for fractions */
 
 .boxedNumeratorOne {
   border: 1px solid black ;
@@ -154,6 +155,9 @@ h2
   color: white;
   font-size: 40px;
 }
+
+
+/*Symbols in the fractions */
 
 .barOne {
   top: 400px;
