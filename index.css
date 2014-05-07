@@ -127,6 +127,25 @@ h2
   margin-left: -200px;
 }
 
+#answerOneError {
+  visibility: visible;
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  font-family: Comic Sans MS;
+  color: white;
+  font-size: 40px;
+}
+
+#answerTwoError {
+  visibility: visible;
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  font-family: Comic Sans MS;
+  color: white;
+  font-size: 40px;
+}
 
 .barOne {
   top: 400px;

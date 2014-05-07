@@ -4,7 +4,7 @@
 <body background="FadedTreasureMap.jpg">
 
 
-<form id = "firstQustion" name = "firstQuestion" method="get" action="secondQuestion.html" >
+<form id = "firstQustion" name = "firstQuestion" method="get" action="secondQuestion.html" autocomplete="off" >
 
 <div class="boxedNumeratorOne">
   1
@@ -29,22 +29,28 @@
 <img src="equalsign.svg" height="40" width="40" style="position:absolute; top:385px; left:850px"> 
 
 <input type="textarea" id="answerNumOne"></input> 
+<div style="visibility:hidden" id="answerOneError"> Did you make sure to change the numerators? </div> 
 <hr class="barThree" noshade size=7 width=120px>
 <input type="textarea" id="answerNumTwo"></input> 
+<div style="visibility:hidden" id="answerTwoError"> Did you make sure to find a common denominator? </div> 
 
 
 <script type="text/javascript">
 var answerNumOne = document.getElementById("answerNumOne")
 var answerNumTwo = document.getElementById("answerNumTwo")
+var answerOneError = document.getElementById("answerOneError")
+var answerTwoError = document.getElementById("answerTwoError")
 
 answerNumOne.addEventListener("input", function(e) {
   var answer = answerNumOne.value;
   if (answer != 5){
     answerNumOne.setAttribute("style", "background-color:red");
+    answerOneError.setAttribute("style", "visibility:visible");
     console.log("you suck");
   }
   else{
     answerNumOne.setAttribute("style", "background-color:green");
+    answerOneError.setAttribute("style", "visibility:hidden");
     console.log("you rock!");
   }
 
@@ -56,11 +62,13 @@ answerNumTwo.addEventListener("input", function(e) {
     answerNumTwo.setAttribute("style", "background-color:red");
     if (answer == 5){
       console.log("Did you remember to find a common denominator?")
+      answerTwoError.setAttribute("style", "visibility:visible");
     }
     console.log("you suck");
   }
   else{
     answerNumTwo.setAttribute("style", "background-color:green");
+    answerTwoError.setAttribute("style", "visibility:hidden");
     console.log("you rock!");
   }
 

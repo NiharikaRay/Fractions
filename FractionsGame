@@ -3,7 +3,7 @@
 
 <body background="OldTreasureMapEdit.jpg">
 <h1> Are you ready to find some treasure? </h1>
-<form action="playerscreen.html">
+<form action="playerscreen.html" autcomplete="off">
 <button id="submit" type="submit" value="submit">Yes</button>
 </form>
 </body>
