@@ -6,75 +6,51 @@
 
 <form id = "firstQustion" name = "firstQuestion" method="get" action="secondQuestion.html" autocomplete="off" >
 
-<div class="boxedNumeratorOne">
-  1
-</div>
-<hr class="barOne" noshade size=7 width=120px>
+<div class="motivation"> Now solve this question </div> 
 
-<div class="boxedDenominatorOne">
-3
-</div>
+<!-- First fraction, unlike !-->
+<div class="boxedNumeratorOneUnlike"> 1 </div>
+<hr class="barOneUnlike" noshade size=7 width=120px>
+<div class="boxedDenominatorOneUnlike"> 3 </div>
 
-<img id="plus" src="plus.svg" height="40" width="40" style= "position:absolute; top:385px; left:600px">
+<img id="plus" src="plus.svg" height="40" width="40" style= "position:absolute; top:385px; left:300px">
 
-<div class="boxedNumeratorTwo">
-  1
-</div>
-<hr class="barTwo" noshade size=7 width=120px>
+<!-- Second fraction, unlike !--> 
+<div class="boxedNumeratorTwoUnlike"> 1 </div>
+<hr class="barTwoUnlike" noshade size=7 width=120px>
+<div class="boxedDenominatorTwoUnlike"> 2 </div>
 
-<div class="boxedDenominatorTwo">
-  2
-</div>
+<img src="equalsign.svg" height="40" width="40" style="position:absolute; top:385px; left:525px"> 
 
-<img src="equalsign.svg" height="40" width="40" style="position:absolute; top:385px; left:850px"> 
+<!-- First unlike fraction that needs to filled out !-->
+<input type="textarea" id="answerNumOneUnlike"></input> 
+<div style="visibility:hidden" id="numOneErrorUnlike"> Did you make sure to change the numerator? </div> 
+<hr class="barThreeUnlike" noshade size=7 width=120px>
+<input type="textarea" id="answerDenOneUnlike"></input> 
+<div style="visibility:hidden" id="denOneErrorUnlike"> Did you make sure to find a common denominator? </div> 
 
-<input type="textarea" id="answerNumOne"></input> 
-<div style="visibility:hidden" id="answerOneError"> Did you make sure to change the numerators? </div> 
-<hr class="barThree" noshade size=7 width=120px>
-<input type="textarea" id="answerNumTwo"></input> 
-<div style="visibility:hidden" id="answerTwoError"> Did you make sure to find a common denominator? </div> 
+<img id="plus" src="plus.svg" height="40" width="40" style= "position:absolute; top:385px; left:730px">
 
+<!--Second unlike fraction that needs to be filled out !-->
+<input type="textarea" id="answerNumTwoUnlike"></input> 
+<div style="visibility:hidden" id="numTwoErrorUnlike"> Did you make sure to change the numerator? </div> 
+<hr class="barFourUnlike" noshade size=7 width=120px>
+<input type="textarea" id="answerDenTwoUnlike"></input> 
+<div style="visibility:hidden" id="denTwoErrorUnlike"> Did you make sure to find a common denominator? </div> 
 
-<script type="text/javascript">
-var answerNumOne = document.getElementById("answerNumOne")
-var answerNumTwo = document.getElementById("answerNumTwo")
-var answerOneError = document.getElementById("answerOneError")
-var answerTwoError = document.getElementById("answerTwoError")
+<img src="equalsign.svg" height="40" width="40" style="position:absolute; top:385px; left:950px"> 
 
-answerNumOne.addEventListener("input", function(e) {
-  var answer = answerNumOne.value;
-  if (answer != 5){
-    answerNumOne.setAttribute("style", "background-color:red");
-    answerOneError.setAttribute("style", "visibility:visible");
-    console.log("you suck");
-  }
-  else{
-    answerNumOne.setAttribute("style", "background-color:green");
-    answerOneError.setAttribute("style", "visibility:hidden");
-    console.log("you rock!");
-  }
+<!-- Final Answer -->
+<input type="textarea" id="finalAnswerNumUnlike"></input> 
+<div style="visibility:hidden" id="finalNumErrorUnlike"> Did you make sure to change the numerator? </div> 
+<hr class="barFiveUnlike" noshade size=7 width=120px>
+<input type="textarea" id="finalAnswerDenUnlike"></input> 
+<div style="visibility:hidden" id="finalDenErrorUnlike"> Did you make sure to find a common denominator? </div> 
+<div style="visibility:hidden" id="done"> You're done! </div> 
 
-}, false);
-
-answerNumTwo.addEventListener("input", function(e) {
-  var answer = answerNumTwo.value;
-  if (answer != 6){
-    answerNumTwo.setAttribute("style", "background-color:red");
-    if (answer == 5){
-      console.log("Did you remember to find a common denominator?")
-      answerTwoError.setAttribute("style", "visibility:visible");
-    }
-    console.log("you suck");
-  }
-  else{
-    answerNumTwo.setAttribute("style", "background-color:green");
-    answerTwoError.setAttribute("style", "visibility:hidden");
-    console.log("you rock!");
-  }
-
-}, false);
-
-</script>
+<script src="firstUnlike.js"> </script>
+<script src="secondUnlike.js"> </script> 
+<script src="finalUnlike.js"> </script> 
 
 <button id="submitQuestion" type="submit" value="submit">Go</button>
 
